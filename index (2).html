@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Taha Taghiniya | WordPress Developer &amp; Web Support Specialist</title>
+<meta name="description" content="Taha Taghiniya is a WordPress developer and web support specialist with hands-on experience building, maintaining and supporting sites including behimen.com, kilidpriz.com, imennaji.ir and mr-imeni.com.">
+<meta name="keywords" content="Taha Taghiniya, طاها تقی نیا, WordPress developer, WordPress designer, web developer portfolio, PHP developer, WordPress support, front-end developer, behimen, kilidpriz, imennaji, mr-imeni">
+<meta name="author" content="Taha Taghiniya">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://tahataghiniya.github.io/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Taha Taghiniya | WordPress Developer &amp; Web Support Specialist">
+<meta property="og:description" content="Portfolio and resume of Taha Taghiniya (طاها تقی نیا) — WordPress developer and web support specialist.">
+<meta property="og:url" content="https://tahataghiniya.github.io/">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="fa_IR">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Taha Taghiniya | WordPress Developer">
+<meta name="twitter:description" content="WordPress developer &amp; web support specialist. Portfolio, skills and projects.">
+
+<!-- Structured data for Google -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Taha Taghiniya",
+  "alternateName": "طاها تقی نیا",
+  "email": "mailto:tahataghiniya88@gmail.com",
+  "jobTitle": "WordPress Developer & Web Support Specialist",
+  "knowsAbout": ["WordPress", "PHP", "Web Development", "Web Support", "HTML", "CSS", "JavaScript"],
+  "url": "https://tahataghiniya.github.io/",
+  "worksFor": [
+    {"@type": "Organization", "name": "behimen.com"},
+    {"@type": "Organization", "name": "kilidpriz.com"},
+    {"@type": "Organization", "name": "imennaji.ir"},
+    {"@type": "Organization", "name": "mr-imeni.com"}
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --bg:#0a0d14;
+    --bg-soft:#0f131c;
+    --glass:rgba(255,255,255,0.06);
+    --glass-border:rgba(255,255,255,0.14);
+    --text:#eef1f7;
+    --text-dim:#9aa3b5;
+    --accent:#5eead4;
+    --accent-2:#8b7bff;
+    --accent-3:#ff8a5c;
+    --mono: 'JetBrains Mono', monospace;
+    --display: 'Space Grotesk', sans-serif;
+    --body: 'Inter', sans-serif;
+  }
+
+  *{margin:0;padding:0;box-sizing:border-box;}
+
+  html{scroll-behavior:smooth;}
+
+  body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:var(--body);
+    line-height:1.6;
+    overflow-x:hidden;
+    cursor:none;
+    position:relative;
+  }
+
+  /* ---------- animated background ---------- */
+  .bg-anim{
+    position:fixed;
+    inset:0;
+    z-index:-2;
+    overflow:hidden;
+    pointer-events:none;
+    background:var(--bg);
+  }
+  .bg-anim .blob{
+    position:absolute;
+    border-radius:50%;
+    filter:blur(70px);
+    opacity:0.55;
+    will-change:transform;
+  }
+  .bg-anim .blob-1{
+    width:44vw; height:44vw;
+    top:-14vw; left:-10vw;
+    background:radial-gradient(circle, rgba(139,123,255,0.55), transparent 70%);
+    animation:drift1 26s ease-in-out infinite;
+  }
+  .bg-anim .blob-2{
+    width:38vw; height:38vw;
+    top:8vh; right:-12vw;
+    background:radial-gradient(circle, rgba(94,234,212,0.45), transparent 70%);
+    animation:drift2 32s ease-in-out infinite;
+  }
+  .bg-anim .blob-3{
+    width:32vw; height:32vw;
+    bottom:-10vw; left:20vw;
+    background:radial-gradient(circle, rgba(255,138,92,0.32), transparent 70%);
+    animation:drift3 30s ease-in-out infinite;
+  }
+  .bg-anim .blob-4{
+    width:26vw; height:26vw;
+    bottom:10vh; right:8vw;
+    background:radial-gradient(circle, rgba(139,123,255,0.3), transparent 70%);
+    animation:drift1 22s ease-in-out infinite reverse;
+  }
+  @keyframes drift1{
+    0%,100%{ transform:translate(0,0) scale(1); }
+    33%{ transform:translate(6vw, 5vh) scale(1.08); }
+    66%{ transform:translate(-4vw, 8vh) scale(0.95); }
+  }
+  @keyframes drift2{
+    0%,100%{ transform:translate(0,0) scale(1); }
+    50%{ transform:translate(-7vw, 9vh) scale(1.12); }
+  }
+  @keyframes drift3{
+    0%,100%{ transform:translate(0,0) scale(1); }
+    50%{ transform:translate(5vw, -6vh) scale(1.15); }
+  }
+
+  .bg-anim .grid{
+    position:absolute;
+    inset:-2px;
+    background-image:
+      linear-gradient(rgba(255,255,255,0.035) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,0.035) 1px, transparent 1px);
+    background-size:46px 46px;
+    mask-image:radial-gradient(circle at 50% 20%, black, transparent 75%);
+    animation:gridpan 60s linear infinite;
+  }
+  @keyframes gridpan{
+    0%{ background-position:0 0, 0 0; }
+    100%{ background-position:200px 300px, 200px 300px; }
+  }
+
+  .bg-anim .particle{
+    position:absolute;
+    width:3px; height:3px;
+    border-radius:50%;
+    background:var(--accent);
+    box-shadow:0 0 8px 1px rgba(94,234,212,0.7);
+    opacity:0.6;
+    animation:floaty linear infinite;
+  }
+  @keyframes floaty{
+    0%{ transform:translateY(0) translateX(0); opacity:0; }
+    10%{ opacity:0.7; }
+    90%{ opacity:0.5; }
+    100%{ transform:translateY(-110vh) translateX(20px); opacity:0; }
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    .bg-anim .blob, .bg-anim .grid, .bg-anim .particle{ animation:none !important; }
+    html{ scroll-behavior:auto; }
+  }
+
+  ::selection{ background:var(--accent); color:#06120f; }
+
+  a{ color:inherit; text-decoration:none; }
+
+  /* ---------- custom cursor ---------- */
+  #cur-dot, #cur-ring{
+    position:fixed;
+    top:0; left:0;
+    border-radius:50%;
+    pointer-events:none;
+    z-index:9999;
+    transform:translate(-50%,-50%);
+    will-change:transform;
+  }
+  #cur-dot{
+    width:7px; height:7px;
+    background:var(--accent);
+    box-shadow:0 0 10px rgba(94,234,212,0.9);
+    transition:transform .08s ease, background .2s ease;
+  }
+  #cur-ring{
+    width:34px; height:34px;
+    border:1px solid rgba(238,241,247,0.5);
+    transition:width .2s ease, height .2s ease, border-color .2s ease, transform .12s ease-out;
+  }
+  body.cur-hover #cur-ring{ width:56px; height:56px; border-color:var(--accent); }
+  body.cur-hover #cur-dot{ background:var(--accent-2); }
+
+  @media (hover:none), (pointer:coarse){
+    #cur-dot, #cur-ring{ display:none; }
+    body{ cursor:auto; }
+  }
+
+  /* ---------- glass dynamic-island nav ---------- */
+  .island-wrap{
+    position:fixed;
+    top:18px; left:0; right:0;
+    display:flex; flex-direction:column; align-items:center;
+    z-index:1000;
+    padding:0 16px;
+  }
+  .island{
+    display:flex;
+    align-items:center;
+    gap:28px;
+    padding:12px 26px;
+    border-radius:999px;
+    background:rgba(20,22,32,0.55);
+    border:1px solid var(--glass-border);
+    backdrop-filter:blur(22px) saturate(160%);
+    -webkit-backdrop-filter:blur(22px) saturate(160%);
+    box-shadow:0 8px 30px rgba(0,0,0,0.35), inset 0 1px 0 rgba(255,255,255,0.08);
+    transition:gap .35s ease, padding .35s ease;
+  }
+  .island .brand{
+    font-family:var(--display);
+    font-weight:600;
+    font-size:0.95rem;
+    letter-spacing:0.02em;
+    display:flex; align-items:center; gap:8px;
+    white-space:nowrap;
+  }
+  .island .brand .dot{ width:7px; height:7px; border-radius:50%; background:var(--accent); box-shadow:0 0 8px var(--accent); }
+  .island nav{ display:flex; gap:20px; }
+  .island nav a{
+    font-size:0.85rem;
+    color:var(--text-dim);
+    font-weight:500;
+    transition:color .2s ease;
+  }
+  .island nav a:hover{ color:var(--text); }
+
+  .nav-toggle{
+    display:none;
+    flex-direction:column;
+    justify-content:center;
+    gap:5px;
+    width:26px; height:26px;
+    background:none;
+    border:none;
+    cursor:pointer;
+  }
+  .nav-toggle span{
+    display:block;
+    width:100%;
+    height:2px;
+    border-radius:2px;
+    background:var(--text);
+    transition:transform .3s ease, opacity .3s ease;
+  }
+  .island-wrap.open .nav-toggle span:nth-child(1){ transform:translateY(7px) rotate(45deg); }
+  .island-wrap.open .nav-toggle span:nth-child(2){ opacity:0; }
+  .island-wrap.open .nav-toggle span:nth-child(3){ transform:translateY(-7px) rotate(-45deg); }
+
+  .mobile-menu{
+    display:none;
+    flex-direction:column;
+    gap:4px;
+    margin-top:10px;
+    padding:14px 10px;
+    border-radius:20px;
+    background:rgba(20,22,32,0.7);
+    border:1px solid var(--glass-border);
+    backdrop-filter:blur(22px) saturate(160%);
+    -webkit-backdrop-filter:blur(22px) saturate(160%);
+    max-width:260px;
+    margin-left:auto; margin-right:auto;
+    opacity:0;
+    transform:translateY(-8px);
+    pointer-events:none;
+    transition:opacity .25s ease, transform .25s ease;
+  }
+  .mobile-menu a{
+    padding:12px 16px;
+    border-radius:12px;
+    font-size:0.9rem;
+    font-weight:500;
+    color:var(--text-dim);
+    transition:background .2s ease, color .2s ease;
+  }
+  .mobile-menu a:hover{ background:rgba(255,255,255,0.06); color:var(--text); }
+  .island-wrap.open .mobile-menu{
+    display:flex;
+    opacity:1;
+    transform:translateY(0);
+    pointer-events:auto;
+  }
+
+  @media (max-width:640px){
+    .island{ gap:14px; padding:10px 16px; }
+    .island nav{ display:none; }
+    .nav-toggle{ display:flex; }
+  }
+  @media (max-width:380px){
+    .island{ padding:9px 14px; }
+    .island .brand{ font-size:0.85rem; }
+  }
+
+  section{ padding:120px 24px; max-width:1080px; margin:0 auto; }
+
+  /* ---------- hero ---------- */
+  .hero{
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    padding-top:140px;
+    max-width:1080px;
+    margin:0 auto;
+    padding-left:24px; padding-right:24px;
+  }
+  .eyebrow{
+    font-family:var(--mono);
+    font-size:0.8rem;
+    color:var(--accent);
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    margin-bottom:22px;
+    display:flex; align-items:center; gap:10px;
+  }
+  .eyebrow::before{
+    content:'';
+    width:26px; height:1px; background:var(--accent);
+  }
+  h1.name{
+    font-family:var(--display);
+    font-weight:700;
+    font-size:clamp(2.6rem, 8vw, 5.4rem);
+    line-height:1.02;
+    letter-spacing:-0.02em;
+  }
+  h1.name span{
+    background:linear-gradient(100deg, var(--accent), var(--accent-2) 60%, var(--accent-3));
+    -webkit-background-clip:text;
+    background-clip:text;
+    color:transparent;
+  }
+  .role{
+    font-family:var(--display);
+    font-size:clamp(1.1rem, 2.6vw, 1.5rem);
+    color:var(--text-dim);
+    margin-top:18px;
+    max-width:640px;
+  }
+  .hero-lede{
+    margin-top:26px;
+    color:var(--text-dim);
+    max-width:560px;
+    font-size:1.02rem;
+  }
+  .hero-actions{
+    margin-top:44px;
+    display:flex; gap:16px; flex-wrap:wrap;
+  }
+  .btn{
+    display:inline-flex; align-items:center; gap:10px;
+    padding:14px 26px;
+    border-radius:14px;
+    font-weight:600;
+    font-size:0.92rem;
+    font-family:var(--body);
+    transition:transform .25s ease, box-shadow .25s ease, background .25s ease;
+  }
+  .btn-primary{
+    background:linear-gradient(120deg, var(--accent), var(--accent-2));
+    color:#07110f;
+    box-shadow:0 10px 30px rgba(94,234,212,0.18);
+  }
+  .btn-primary:hover{ transform:translateY(-3px); box-shadow:0 14px 34px rgba(94,234,212,0.28); }
+  .btn-ghost{
+    background:var(--glass);
+    border:1px solid var(--glass-border);
+    color:var(--text);
+    backdrop-filter:blur(10px);
+  }
+  .btn-ghost:hover{ transform:translateY(-3px); border-color:var(--accent); }
+
+  .scroll-cue{
+    position:absolute;
+    bottom:34px; left:50%; transform:translateX(-50%);
+    font-family:var(--mono);
+    font-size:0.7rem;
+    color:var(--text-dim);
+    letter-spacing:0.18em;
+    text-transform:uppercase;
+    display:flex; flex-direction:column; align-items:center; gap:10px;
+  }
+  .scroll-cue .line{ width:1px; height:34px; background:linear-gradient(var(--accent), transparent); animation:pulse-line 2s ease-in-out infinite; }
+  @keyframes pulse-line{ 0%,100%{opacity:.3;} 50%{opacity:1;} }
+
+  /* ---------- section headers ---------- */
+  .sec-head{ margin-bottom:56px; }
+  .sec-num{
+    font-family:var(--mono);
+    color:var(--accent);
+    font-size:0.8rem;
+    letter-spacing:0.1em;
+  }
+  .sec-title{
+    font-family:var(--display);
+    font-weight:600;
+    font-size:clamp(1.8rem, 4vw, 2.6rem);
+    margin-top:10px;
+  }
+  .sec-sub{ color:var(--text-dim); margin-top:12px; max-width:560px; }
+
+  /* ---------- skills ---------- */
+  .skills-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(230px, 1fr));
+    gap:18px;
+  }
+  .skill-card{
+    padding:26px 24px;
+    border-radius:18px;
+    background:var(--glass);
+    border:1px solid var(--glass-border);
+    backdrop-filter:blur(14px);
+    transition:transform .3s ease, border-color .3s ease, background .3s ease;
+  }
+  .skill-card:hover{
+    transform:translateY(-6px);
+    border-color:rgba(94,234,212,0.4);
+    background:rgba(255,255,255,0.09);
+  }
+  .skill-card .icon{
+    font-family:var(--mono);
+    font-size:0.75rem;
+    color:var(--accent);
+    letter-spacing:0.08em;
+  }
+  .skill-card h3{
+    font-family:var(--display);
+    font-size:1.08rem;
+    margin-top:14px;
+    font-weight:600;
+  }
+  .skill-card p{
+    color:var(--text-dim);
+    font-size:0.9rem;
+    margin-top:8px;
+  }
+
+  /* ---------- projects ---------- */
+  .projects-list{ display:flex; flex-direction:column; gap:16px; }
+  .project-card{
+    display:grid;
+    grid-template-columns:120px 1fr auto;
+    align-items:center;
+    gap:24px;
+    padding:26px 28px;
+    border-radius:18px;
+    background:var(--glass);
+    border:1px solid var(--glass-border);
+    backdrop-filter:blur(14px);
+    transition:transform .3s ease, border-color .3s ease;
+  }
+  .project-card:hover{ transform:translateX(6px); border-color:rgba(139,123,255,0.45); }
+  .project-role{
+    font-family:var(--mono);
+    font-size:0.72rem;
+    color:var(--accent-2);
+    text-transform:uppercase;
+    letter-spacing:0.08em;
+    border:1px solid rgba(139,123,255,0.35);
+    padding:6px 10px;
+    border-radius:999px;
+    text-align:center;
+  }
+  .project-info h3{
+    font-family:var(--display);
+    font-size:1.2rem;
+    font-weight:600;
+  }
+  .project-info p{
+    color:var(--text-dim);
+    font-size:0.92rem;
+    margin-top:6px;
+  }
+  .project-link{
+    font-family:var(--mono);
+    font-size:0.85rem;
+    color:var(--text);
+    border-bottom:1px solid var(--glass-border);
+    padding-bottom:2px;
+    white-space:nowrap;
+  }
+  .project-link:hover{ border-color:var(--accent); color:var(--accent); }
+
+  @media (max-width:680px){
+    .project-card{ grid-template-columns:1fr; text-align:left; gap:12px; }
+    .project-role{ width:fit-content; }
+  }
+
+  /* ---------- about strip ---------- */
+  .about-strip{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:40px;
+    align-items:start;
+  }
+  .about-strip p{ color:var(--text-dim); font-size:1.02rem; }
+  .about-strip .quote{
+    font-family:var(--display);
+    font-size:1.3rem;
+    line-height:1.5;
+    color:var(--text);
+  }
+  @media (max-width:760px){ .about-strip{ grid-template-columns:1fr; } }
+
+  /* ---------- contact / footer ---------- */
+  footer{
+    padding:100px 24px 60px;
+    max-width:1080px;
+    margin:0 auto;
+    text-align:center;
+  }
+  footer .sec-num{ display:block; margin-bottom:10px; }
+  footer h2{
+    font-family:var(--display);
+    font-weight:700;
+    font-size:clamp(2rem, 6vw, 3.2rem);
+  }
+  footer h2 span{ color:var(--accent); }
+  .email-btn{
+    margin-top:36px;
+    display:inline-flex;
+    align-items:center;
+    gap:12px;
+    padding:18px 34px;
+    border-radius:16px;
+    background:linear-gradient(120deg, rgba(94,234,212,0.14), rgba(139,123,255,0.14));
+    border:1px solid var(--glass-border);
+    font-family:var(--mono);
+    font-size:1rem;
+    backdrop-filter:blur(14px);
+    transition:transform .25s ease, border-color .25s ease;
+  }
+  .email-btn:hover{ transform:translateY(-4px); border-color:var(--accent); }
+  .foot-meta{
+    margin-top:60px;
+    color:var(--text-dim);
+    font-size:0.8rem;
+    display:flex;
+    flex-direction:column;
+    gap:6px;
+  }
+  .foot-meta .alt-name{ font-size:0.78rem; opacity:0.75; }
+
+  ::-webkit-scrollbar{ width:10px; }
+  ::-webkit-scrollbar-track{ background:var(--bg); }
+  ::-webkit-scrollbar-thumb{ background:rgba(255,255,255,0.15); border-radius:6px; }
+
+  /* ---------- broader mobile tuning ---------- */
+  @media (max-width:640px){
+    section{ padding:88px 20px; }
+    .hero{ padding-top:120px; min-height:auto; padding-bottom:100px; }
+    .hero-actions{ flex-direction:column; align-items:stretch; }
+    .btn{ justify-content:center; }
+    .skill-card{ padding:22px 20px; }
+    .project-card{ padding:20px 20px; }
+    .sec-head{ margin-bottom:38px; }
+    footer{ padding:80px 20px 50px; }
+    .email-btn{ width:100%; justify-content:center; word-break:break-all; padding:16px 18px; }
+    .bg-anim .blob-1, .bg-anim .blob-2, .bg-anim .blob-3, .bg-anim .blob-4{ filter:blur(50px); }
+  }
+  @media (max-width:400px){
+    h1.name{ font-size:2.4rem; }
+    .eyebrow{ font-size:0.7rem; }
+  }
+</style>
+</head>
+<body>
+
+<div class="bg-anim" aria-hidden="true">
+  <div class="grid"></div>
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+  <div class="blob blob-3"></div>
+  <div class="blob blob-4"></div>
+  <div id="particles"></div>
+</div>
+
+<div id="cur-dot"></div>
+<div id="cur-ring"></div>
+
+<div class="island-wrap">
+  <div class="island">
+    <div class="brand"><span class="dot"></span>Taha Taghiniya</div>
+    <nav id="mainNav">
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button id="navToggle" class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div id="mobileMenu" class="mobile-menu">
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </div>
+</div>
+
+<header class="hero">
+  <div class="eyebrow">WordPress Developer &amp; Web Support Specialist</div>
+  <h1 class="name">Taha <span>Taghiniya</span></h1>
+  <p class="role">I design, build and support WordPress websites — from custom themes to day-to-day site administration.</p>
+  <p class="hero-lede">I've worked as a developer and site administrator across four production websites, handling everything from front-end builds and theme customization to ongoing technical support.</p>
+  <div class="hero-actions">
+    <a class="btn btn-primary" href="#projects">View my projects</a>
+    <a class="btn btn-ghost" href="mailto:tahataghiniya88@gmail.com">Email me</a>
+  </div>
+  <div class="scroll-cue"><span>Scroll</span><span class="line"></span></div>
+</header>
+
+<section id="skills">
+  <div class="sec-head">
+    <div class="sec-num">01 / Skills</div>
+    <h2 class="sec-title">What I work with</h2>
+    <p class="sec-sub">A practical, hands-on skill set built from real client and business websites — not just theory.</p>
+  </div>
+  <div class="skills-grid">
+    <div class="skill-card">
+      <div class="icon">WP</div>
+      <h3>WordPress Site Design</h3>
+      <p>Building and designing full WordPress websites, from layout and theming to structure and content setup.</p>
+    </div>
+    <div class="skill-card">
+      <div class="icon">DEV</div>
+      <h3>Theme &amp; Plugin Customization</h3>
+      <p>Customizing themes and plugins to match business needs, including layout, functionality and styling changes.</p>
+    </div>
+    <div class="skill-card">
+      <div class="icon">SUP</div>
+      <h3>Site Administration &amp; Support</h3>
+      <p>Ongoing website administration, troubleshooting, updates and day-to-day technical support for live sites.</p>
+    </div>
+    <div class="skill-card">
+      <div class="icon">FE</div>
+      <h3>HTML, CSS &amp; JavaScript</h3>
+      <p>Front-end implementation for the pages and features that sit on top of WordPress.</p>
+    </div>
+    <div class="skill-card">
+      <div class="icon">OPT</div>
+      <h3>Performance &amp; Reliability</h3>
+      <p>Keeping sites fast, stable and easy to maintain through practical fixes rather than one-off patches.</p>
+    </div>
+    <div class="skill-card">
+      <div class="icon">CX</div>
+      <h3>Client &amp; User Support</h3>
+      <p>Direct, responsive support experience gained from running admin and helpdesk duties on a live website.</p>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="sec-head">
+    <div class="sec-num">02 / Projects</div>
+    <h2 class="sec-title">Where I've worked</h2>
+    <p class="sec-sub">Four websites where I've taken on development and support responsibilities.</p>
+  </div>
+  <div class="projects-list">
+    <div class="project-card">
+      <div class="project-role">Developer</div>
+      <div class="project-info">
+        <h3>behimen.com</h3>
+        <p>Developed and maintained the site's WordPress build, working on structure, styling and functionality.</p>
+      </div>
+      <a class="project-link" href="https://behimen.com" target="_blank" rel="noopener">Visit site &#8594;</a>
+    </div>
+    <div class="project-card">
+      <div class="project-role">Admin &amp; Support</div>
+      <div class="project-info">
+        <h3>kilidpriz.com</h3>
+        <p>Managed site administration and provided ongoing technical support to keep the site running smoothly.</p>
+      </div>
+      <a class="project-link" href="https://kilidpriz.com" target="_blank" rel="noopener">Visit site &#8594;</a>
+    </div>
+    <div class="project-card">
+      <div class="project-role">Developer</div>
+      <div class="project-info">
+        <h3>imennaji.ir</h3>
+        <p>Built and developed features and pages on the site's WordPress platform.</p>
+      </div>
+      <a class="project-link" href="https://imennaji.ir" target="_blank" rel="noopener">Visit site &#8594;</a>
+    </div>
+    <div class="project-card">
+      <div class="project-role">Developer</div>
+      <div class="project-info">
+        <h3>mr-imeni.com</h3>
+        <p>Contributed as a developer, working on the site's design and WordPress implementation.</p>
+      </div>
+      <a class="project-link" href="https://mr-imeni.com" target="_blank" rel="noopener">Visit site &#8594;</a>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="sec-head">
+    <div class="sec-num">03 / About</div>
+    <h2 class="sec-title">A bit about how I work</h2>
+  </div>
+  <div class="about-strip">
+    <p class="quote">I like taking a WordPress site from "it works" to "it works well" — clean structure, dependable performance, and support people can actually rely on.</p>
+    <p>My background covers both sides of the job: building sites as a developer, and keeping them running as an administrator and support contact. That combination means I don't just ship a build and walk away — I understand what happens after launch, and I design with that in mind.</p>
+  </div>
+</section>
+
+<footer id="contact">
+  <div class="sec-num">04 / Contact</div>
+  <h2>Let's build something <span>reliable</span>.</h2>
+  <p style="color:var(--text-dim); margin-top:18px; max-width:480px; margin-left:auto; margin-right:auto;">
+    Have a WordPress project, or need a hand supporting an existing site? Send me an email — I read every message.
+  </p>
+  <a class="email-btn" href="mailto:tahataghiniya88@gmail.com">tahataghiniya88@gmail.com</a>
+  <div class="foot-meta">
+    <span>© <span id="year"></span> Taha Taghiniya. All rights reserved.</span>
+    <span class="alt-name">Also known as: طاها تقی نیا — وردپرس دولوپر و پشتیبان وب‌سایت</span>
+  </div>
+</footer>
+
+<script>
+  // custom cursor
+  const dot = document.getElementById('cur-dot');
+  const ring = document.getElementById('cur-ring');
+  let mouseX = 0, mouseY = 0, ringX = 0, ringY = 0;
+
+  window.addEventListener('mousemove', (e) => {
+    mouseX = e.clientX; mouseY = e.clientY;
+    dot.style.transform = `translate(${mouseX}px, ${mouseY}px) translate(-50%,-50%)`;
+  });
+
+  function animateRing(){
+    ringX += (mouseX - ringX) * 0.16;
+    ringY += (mouseY - ringY) * 0.16;
+    ring.style.transform = `translate(${ringX}px, ${ringY}px) translate(-50%,-50%)`;
+    requestAnimationFrame(animateRing);
+  }
+  animateRing();
+
+  const hoverables = document.querySelectorAll('a, button, .skill-card, .project-card');
+  hoverables.forEach(el => {
+    el.addEventListener('mouseenter', () => document.body.classList.add('cur-hover'));
+    el.addEventListener('mouseleave', () => document.body.classList.remove('cur-hover'));
+  });
+
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // floating background particles
+  const particleHost = document.getElementById('particles');
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (particleHost && !reduceMotion){
+    const count = window.innerWidth < 640 ? 10 : 18;
+    for (let i = 0; i < count; i++){
+      const p = document.createElement('div');
+      p.className = 'particle';
+      p.style.left = Math.random() * 100 + 'vw';
+      p.style.bottom = (-10 - Math.random() * 20) + 'vh';
+      p.style.animationDuration = (14 + Math.random() * 14) + 's';
+      p.style.animationDelay = (Math.random() * 14) + 's';
+      p.style.opacity = (0.3 + Math.random() * 0.4).toFixed(2);
+      particleHost.appendChild(p);
+    }
+  }
+
+  // mobile menu toggle
+  const islandWrap = document.querySelector('.island-wrap');
+  const navToggle = document.getElementById('navToggle');
+  if (navToggle){
+    navToggle.addEventListener('click', () => {
+      const isOpen = islandWrap.classList.toggle('open');
+      navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+    document.querySelectorAll('#mobileMenu a').forEach(link => {
+      link.addEventListener('click', () => {
+        islandWrap.classList.remove('open');
+        navToggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+  }
+</script>
+
+</body>
+</html>
